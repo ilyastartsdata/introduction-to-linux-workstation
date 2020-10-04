@@ -131,6 +131,92 @@ Let's take a look at the utilities in order. All the utilities under considerati
   ```shell
   sudo ip addr add {id_addr/mask} dev {interface}
   ```
+  
+  Example:
+  
+  ```shell
+  sudo ip addr add 192.168.0.110/24 dev enp0s25
+  ```
+
+  The name of the interface can be found in the ```ip a``` output. It is necessary for the operating system to be able to match a particular physical device to the software properties assigned to that device (IP address).
+  
+  4. Setting the default route:
+  
+  ```shell
+  sudo ip route add default via {ip_gateway}
+  ```
+  
+  Example:
+  
+  ```shell
+  sudo ip route add default via 192.168.0.1
+  ```
+  
+#### Changing or configuring the network using the ifconfig and route utilities from the net-tools package
+
+  1. View available interfaces and current settings (does not require superuser rights): ```ifconfig -a```.
+  2. Change or assignment of an IP address to an interface:
+  
+  ```shell
+  sudo ifconfig {interface} {ip_addr} netmask {netmask}
+  ```
+  
+  Example:
+  
+  ```shell
+  sudo ifconfig eth0 192.168.0.100 netmask 255.255.255.0
+  ```
+  
+  3. Setting the default route:
+  
+  ```shell
+  sudo route add default gw {ip_gateway}
+  ```
+  
+  Example:
+  
+  ```shell
+  sudo route add default gw 192.168.0.1
+  ```
+  
+#### Changing or configuring the network using the nmcli utility
+
+**Nmcli** is a utility for managing the NetworkManager service from the command line. It can be used when working with the desktop version of Ubuntu.
+
+  1. View available interfaces and current settings (does not require superuser rights): ```nmcli device``` - will show existing devices, ```nmcli -p device show``` - will show network settings on all available interfaces.
+  2. Setting up the network connection using nmcli (add static address):
+  
+  ```shell
+  sudo nmcli connection add con-name "{name_connection}" ifname {device} autoconnect {yes/no} type ethernet ip4 {ip_addr} gw4 {ip_gateway}
+  ```
+  
+  ```{Name_connection}``` - name of connection (it is better to use one word in English), ```{device}``` - network interface, ```autoconnect {yes/no}``` - allow connection at system start automatically or not, ```{ip_addr}``` - IP address, ```{ip_gateway}``` - ip gateway. 
+
+  Example:
+  
+  ```shell
+  sudo nmcli connection add con-name "connection1" ifname enp0s2 autoconnect yes type ethernet ip4 192.168.0.100 gw4 192.168.0.1
+  ```
+
+#### System update. Installation of VM add-ons if necessary
+
+The next step to be taken after installing the operating system is to install add-ons for the virtual machine and update the operating system. The add-ons are particularly necessary if we are using a virtual machine running VirtualBox.
+
+##### Installation of guest OS extensions (VirtualBox)
+
+The guest operating system add-ons contain a set of applications and drivers required to optimise, improve performance and ease of use.
+
+  1. In the Virtual Machine Management menu, select 'Devices' and at the end of the list click 'Connect guest OS add-on image'.
+  2. The installation of applications requires superuser rights, so we will perform all subsequent actions using the sudo utility. In the installed OS, we execute the following command: ```sudo apt update```. Apt is a utility for managing packages, in other words, applications in Ubuntu. The ```update``` option tells the utility that it needs to update information about available packages in repositories (repository - repository of packages).
+  3. Using the apt utility, we will download and install the following packages: ```sudo apt install perl make gcc -y```. Here the ```install``` parameter tells the ```apt``` utility that three packages need to be installed and the ```-y``` parameter means that ```apt``` will install the packages without user confirmation.
+  4. Ubuntu Server does not include the option to auto-Mount (connect) external media. The next step is to mount a connected OS add-on image (requires superuser rights): ```sudo mount/dev/cdrom/mnt``` , where ```mount``` is a utility for mounting disk devices in Linux, ```/dev/cdrom``` is a virtual CD reader. It can also be real, physical. The directory ```/mnt``` is a ```cdrom``` mount point.
+  5. Go to the /mnt directory: cd /mnt. C" (Change Directory) - a command to move between directories in Linux. We run the add-on installation script: ```sudo ./VBoxLinuxAdditions.run```.
+  
+Once the add-ons have been installed, the operating system must be rebooted, but before this can be done, the updates must be installed. To do this, we will execute the command ```sudo apt upgrade -y```. The ```upgrade -y``` parameters tell the apt utility that it is necessary to upgrade the system without asking the user for confirmation. When the upgrade is complete, we reboot the operating system: ```sudo reboot```.
+
+##### Installation of OpenSSH Server and Midnight Commander file manager
+
+Ubuntu Server OpenSSH Server is installed automatically; if you use Ubuntu Desktop, you must install it yourself: ```sudo apt install openssh-server -y```. It is also recommended to install the Midnight Commander: ```sudo apt install mc -y``` file manager for easy navigation and work with files.
 
 ## Contributing
 
