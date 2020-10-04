@@ -30,6 +30,18 @@ After the start we will see the first difference between the server version of U
 
 ![Screenshot_1](https://github.com/ilyastartsdata/linux_workstation/blob/main/screenshots/%231.png)
 
+The next step is to choose the layout. Here we leave everything as default, select the "Done" key and proceed to the network setting point. Select the network interface and press Enter. We are offered several ways to assign an IP address to our server:
+
+  1. Using the DHCP (Automatic DHCP) protocol - this option is most convenient, particularly if your virtual machine has a NAT network connection type
+  2. Manual - used when we know the network settings for our server and this option will be used later in the installation review process
+  3. Disabled - an option when the network is not used
+  
+![Screenshot_2](https://github.com/ilyastartsdata/linux_workstation/blob/main/screenshots/%232.png)
+
+Choose the Manual option, press Enter and enter a subnet in x.x.x.x/mask format (192.168.0.0/24), IP address, default gateway and DNS server (use Google DNS 8.8.8.8). Click on "Save". We proceed to the next step.
+
+![Screenshot_3](https://github.com/ilyastartsdata/linux_workstation/blob/main/screenshots/%233.png)
+
 ## Contributing
 
 Pull requests are welcome.
