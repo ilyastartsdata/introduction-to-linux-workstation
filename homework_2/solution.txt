@@ -1,0 +1,21 @@
+The archive from the screenshots is too heavy, so I designed it like this.
+
+Checking the status of the directory using ```ls```.
+
+Deletion of existing directories and files using ```rm and ```rm -r```.
+
+Creation of new testfolder and productionfolder directories using ```mkdir```.
+
+Switching to testfolder using cd and creating a file using ```touch```.
+
+Switching to the reverse directory using ```cd`` and creating a file there.
+
+Switching between directories using the absolute path.
+
+Error when trying to write to a file inside a testfolder.
+
+Tried to write into a log file and displayed its contents using the ```cat```.
+
+Renaming the file using ```mv``` and copying the file to the same directory but with a new name.
+
+Copying a file from one directory to another using ```sudo su``` administrative rights and copying ```cp```.
