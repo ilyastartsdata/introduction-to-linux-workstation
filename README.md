@@ -1,6 +1,6 @@
 ![Geekbrains Logo](https://github.com/ilyastartsdata/introductiontopython/blob/master/gb.png)
 
-# Linux. Working station.
+# Linux. Workstation.
 
 Course from Geekbrains University
 
