@@ -1,0 +1,23 @@
+User list using cat /etc/passwd
+
+Change to root user via sudo su -
+
+Create a new user via useradd -s /bin/bash -d /home/test -m test
+
+Deletion of the user via userdel
+
+Making changes to the user file manually, after the first error I decided to simply demonstrate an attempt, but not actually change it. Basic function vim /etc/passwd
+
+Call up the group list file via cat /etc/group
+
+Create a test group through groupadd
+
+Manual group creation via vim /etc/group
+
+Change the group of a certain user by usermod -a -G, after deletion by gpasswd -d
+
+Creating a super user
+
+Opening the sudoers file
+
+Granting of rights to create new users to the superman user
