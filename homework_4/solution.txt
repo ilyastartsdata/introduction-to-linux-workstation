@@ -1,0 +1,37 @@
+Homework #4
+
+Create a file via echo command
+
+Output redirection using >
+
+Output redirection using cat and >
+
+Using ls + cut
+
+Preparation for process management
+
+Problem with the tilde sign
+
+I spent more than one hour making a tilde sign in the terminal on a mac, but I failed. The layout of my keyboard is QWERT.
+I had planned to enter: cat ~/.ssh/id_rsa.pub 
+
+Next steps:
+1. Open file /etc/ssh/sshd_config
+2. Comment on the PasswordAuthentication directive and establish meaning no - PasswordAuthentication no
+3. Save changes, restart via sudo systemctl restart ssh. Then we go back to /etc/ssh/sshd_config.
+4. PasswordAuthentication yes
+5. Sudo systemctl reload sshd
+
+The difference between restart and reload is that restart means full stop and start after it, while reload continues to work and simply re-reads the configuration files.
+
+Create a file via cat > file_name, write to it and use the Contol + D keys. Exit from the file is performed. 
+
+I assume that this is EOF (end of file), i.e. the input stream is finished.
+
+Installation mc via sudo apt-get install mc
+
+Launch mc
+
+ps -d
+
+Completion of the process through kill -9 13052
