@@ -12,17 +12,17 @@ Linux. Workstation - Geekbrains
 
 **Управление пользователями**
 
-a) создать пользователя, используя утилиту ```useradd```; 
-b) удалить пользователя, используя утилиту ```userdel```;
-c) создать пользователя в ручном режиме.
+a. создать пользователя, используя утилиту ```useradd```; 
+b. удалить пользователя, используя утилиту ```userdel```;
+c. создать пользователя в ручном режиме.
 
 #### En
 
 **User Management**
 
-a) create a user using the ```useradd``` utility; 
-b) delete a user using the ```userdel``` utility;
-c) create a user in manual mode.
+a. create a user using the ```useradd``` utility; 
+b. delete a user using the ```userdel``` utility;
+c. create a user in manual mode.
 
 ## Task #2
 
