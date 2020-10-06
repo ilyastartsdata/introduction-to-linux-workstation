@@ -30,19 +30,19 @@ Linux. Workstation - Geekbrains
 
 **Управление группами**
 
-a) создать группу с использованием утилит и в ручном режиме; 
-b) попрактиковаться в смене групп у пользователей;
-c) добавить пользователя в группу, не меняя основной;
-d) удалить пользователя из группы.
+1. создать группу с использованием утилит и в ручном режиме; 
+2. попрактиковаться в смене групп у пользователей;
+3. добавить пользователя в группу, не меняя основной;
+4. удалить пользователя из группы.
 
 #### En
 
 **Group Management**
 
-a) create a group using utilities and in manual mode; 
-b) practice changing groups with users;
-c) add the user to the group without changing the main group;
-d) remove the user from the group.
+1. create a group using utilities and in manual mode; 
+2. practice changing groups with users;
+3. add the user to the group without changing the main group;
+4. remove the user from the group.
 
 ## Task #3
 
