@@ -1,0 +1,36 @@
+Homework #6
+
+Task 1
+
+Creating the text file
+cat file.txt
+
+Script to perform two tasks
+#!/bin/bash
+sed '/s^$/d' file.txt >> output.txt
+sed -e 's/\(.*\)/\U\1/' file.txt >> output.txt
+
+Running the script and checking the results
+sudo chmod +x removeandupper.sh
+./removeandupper.sh
+cat output.txt
+
+The idea that came the next morning was to unite the two sed teams via a vertical line |
+
+Task 2
+
+Unfortunately, I was so passionate about the task that I did not take screenshots of the process itself
+
+Script used: for i in {2010...2017}; do for j in {1...12}; do for f in {1...10}; do mkdir -p year_$i/month_$j & echo "file_$f" >> year_$i/month_$j/$f.txt; done; done; done
+
+Task 4
+
+Used grep -r 'ivolgini' /var/log/syslog once to view system events occurring with ivolgini
+
+Second time used grep -r 'INFO' /var/log/syslog to search for matches by string (as in the lesson)
+
+Task 5
+
+First I did with the shutdown command, then I thought and remembered that we need to reboot, not knock them out.
+I rebooted it 6 or 7 times, because if shutdown is ready to be scheduled, reboot does it immediately even though the syntax is the same.
+My version is: echo "reboot" | at 0000 aug 20
