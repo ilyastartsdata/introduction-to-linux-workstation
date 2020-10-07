@@ -1,1 +1,30 @@
-Here is solution to this problem
+Homework #5
+
+Task1
+
+ls -lah /etc > file1
+cp file1 file2
+ln -s file1 file3
+ln file1 file4
+ll
+File 1 and 4 have similar inodes
+
+Deleting the file1 using rm
+After deleting file3 is no more accessable, file2 didn't change, and file4 replaced file1
+
+Task2
+
+Rename the file via rename 's/file/test/' file*
+Creation of a symbolic link via ln -s test2 test5
+Create directory tmp via mkdir tmp
+Moving a symbolic link to the tmp directory via mv test5 tmp/ Can't open the link after the move
+
+Task3
+
+Create two files via touch
+Assignment of rights via chmod 664 testfile1 and chmod 600 testfile2
+All rights have been taken away so that they can be assigned again via letter values
+
+Task 4
+
+sudo useradd -ou 0 -g 0 superpuperuser
