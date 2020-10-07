@@ -1,0 +1,15 @@
+Homework #7
+
+Task 1
+
+Installation of packages to connect the apt repository
+Connection apt for stable nginx version
+Import of the official key to verify package authenticity
+Checking the keys
+Removal of nginx via dpkg
+
+Task 2
+
+Installation of snap
+Search for available packages
+Installation of packages
