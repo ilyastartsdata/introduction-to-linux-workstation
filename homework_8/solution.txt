@@ -1,0 +1,45 @@
+Homework #8
+
+Task 1
+
+The first step was to update the system via the following two commands:
+
+  sudo apt update
+  sudo apt upgrade
+
+The necessary packages were then installed via sudo apt-get install curl apt-transport-https ca-certificates software-properties-common
+
+Docker repositories have been added by way:
+
+  curl -fsSL https://download.docker .com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo add-apt-repository “deb [arch=amd64] https://download.docker.com/linux/ubuntu$(lsb_release -cs) stable"
+  
+I then updated the repository information via sudo apt update
+
+Docker Installation
+
+  sudo apt install docker-ce
+
+Status check
+
+Task 2
+
+Launch of the latest version of the Ubuntu image, adding options provides interactive access to the command processor
+
+  docker run -it ubuntu
+
+Database of packages 
+
+  apt update
+
+Installation example
+
+  apt install nodejs
+
+Checking version
+
+  node -v
+
+View of running containers
+
+  docker ps -a
